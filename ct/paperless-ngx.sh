@@ -108,7 +108,7 @@ function update_script() {
       msg_ok "Started all Paperless-ngx Services"
       msg_ok "Updated Successfully!\n"
     else
-      msg_ok "No update required. ${APP} is already at ${RELEASE} Enjoy your day."
+      msg_ok "No update required. ${APP} is already at ${RELEASE}\n"
     fi
     exit
   fi
