@@ -4,7 +4,7 @@ source <(curl -s https://raw.githubusercontent.com/Mike-Allen/Proxmox/Localize/m
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/Mike-Allen/Proxmox/raw/Localize/LICENSE
 
 function header_info {
 clear
