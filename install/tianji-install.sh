@@ -4,7 +4,7 @@
 # Author: tteck
 # Co-Author: MickLesk (Canbiz)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/Mike-Allen/Proxmox/raw/Localize/LICENSE
 # Source: https://github.com/msgbyte/tianji
 
 source /dev/stdin <<< "$FUNCTIONS_FILE_PATH"
