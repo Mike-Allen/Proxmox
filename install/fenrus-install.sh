@@ -4,7 +4,7 @@
 # Author: tteck (tteckster)
 # Co-Author: Scorpoon
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/Mike-Allen/Proxmox/raw/Localize/LICENSE
 # Source: https://github.com/revenz/Fenrus
 
 
