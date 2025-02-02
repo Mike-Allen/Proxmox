@@ -17,7 +17,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **Open WebUI LXC** [(Commit)](https://github.com/tteck/Proxmox/commit/8a21f6e7f025a911865395d4c0fa9a001bd0d512)
+- **Open WebUI LXC** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/8a21f6e7f025a911865395d4c0fa9a001bd0d512)
   - Refactor Script to add an option to install Ollama.
 
 ## 2024-10-26
@@ -31,7 +31,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **Zoraxy LXC** [(Commit)](https://github.com/tteck/Proxmox/commit/468a5d367ded4cf453a1507452e112ac3e234e2a)
+- **Zoraxy LXC** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/468a5d367ded4cf453a1507452e112ac3e234e2a)
   - Switch built from source to a pre-compiled binary version.
   - Breaking Change
 
@@ -73,7 +73,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 - **MySQL LXC** [(View Source)](https://github.com/Mike-Allen/Proxmox/blob/Localize/install/mysql-install.sh)
   - NEW Script
-- **Tianji LXC** [(Commit)](https://github.com/tteck/Proxmox/commit/4c83a790ac9b040da1f11ad2cbe13d3fc5f480e9)
+- **Tianji LXC** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/4c83a790ac9b040da1f11ad2cbe13d3fc5f480e9)
   - Breaking Change
   - Switch from `pm2` process management to `systemd`
 
@@ -81,7 +81,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **Home Assistant Core LXC** [(Commit)](https://github.com/tteck/Proxmox/commit/f2937febe69b2bad8b3a14eb84aa562a8f14cc6a) [(Commit)](https://github.com/tteck/Proxmox/commit/f2966ced7f457fd506f865f7f5b70ea12c4b0049)
+- **Home Assistant Core LXC** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/f2937febe69b2bad8b3a14eb84aa562a8f14cc6a) [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/f2966ced7f457fd506f865f7f5b70ea12c4b0049)
   - Refactor Code
   - Breaking Change
   - Home Assistant has transitioned to using `uv` for managing the virtual environment and installing additional modules.
@@ -106,7 +106,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **WireGuard LXC** [(Commit)](https://github.com/tteck/Proxmox/commit/723365a79df7cc0fd29b1af8f7ef200a7e0921b1)
+- **WireGuard LXC** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/723365a79df7cc0fd29b1af8f7ef200a7e0921b1)
   - Refactor Code
   - Breaking Change
 
@@ -114,7 +114,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **CommaFeed LXC** [(Commit)](https://github.com/tteck/Proxmox/commit/0a33d1739ec3a49011411929bd46a260e92e99f9)
+- **CommaFeed LXC** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/0a33d1739ec3a49011411929bd46a260e92e99f9)
   - Refactor Code
   - Breaking Change
 
@@ -136,7 +136,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **All Scripts** [(Commit)](https://github.com/tteck/Proxmox/commit/39ea1d4a20b83c07d084ebafdc811eec3548f289)
+- **All Scripts** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/39ea1d4a20b83c07d084ebafdc811eec3548f289)
   - Requires Proxmox Virtual Environment version 8.1 or later.
 
 ## 2024-06-27
@@ -213,7 +213,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **Advanced Settings** [(Commit)](https://github.com/tteck/Proxmox/commit/fc9dff220b4ea426d3a75178ad8accacae4683ca)
+- **Advanced Settings** [(Commit)](https://github.com/Mike-Allen/Proxmox/commit/fc9dff220b4ea426d3a75178ad8accacae4683ca)
   - Passwords are now masked
 
 ## 2024-05-30
@@ -362,7 +362,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **Frigate LXC**
-  - Unprivileged Hardware Acceleration https://github.com/tteck/Proxmox/discussions/2711#discussioncomment-9244629
+  - Unprivileged Hardware Acceleration https://github.com/Mike-Allen/Proxmox/discussions/2711#discussioncomment-9244629
 - **Ubuntu 24.04 VM**
   - NEW Script
 
@@ -527,21 +527,21 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **All scripts**
-  - As of today, the scripts require the Bash shell specifically. ([more info](https://github.com/tteck/Proxmox/discussions/2536))
+  - As of today, the scripts require the Bash shell specifically. ([more info](https://github.com/Mike-Allen/Proxmox/discussions/2536))
 
 ## 2024-02-19
 
 ### Changed
 
 - **PairDrop LXC**
-  - Removed from the website ([more info](https://github.com/tteck/Proxmox/discussions/2516))
+  - Removed from the website ([more info](https://github.com/Mike-Allen/Proxmox/discussions/2516))
 
 ## 2024-02-16
 
 ### Changed
 
 - **Proxmox VE LXC Filesystem Trim**
-  - NEW Script ([more info](https://github.com/tteck/Proxmox/discussions/2505#discussion-6226037))
+  - NEW Script ([more info](https://github.com/Mike-Allen/Proxmox/discussions/2505#discussion-6226037))
 
 ## 2024-02-11
 
@@ -626,7 +626,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 - **Apt-Cacher-NG LXC**
   - NEW Script
 - **New Feature**
-  - The option to utilize Apt-Cacher-NG (Advanced settings) when creating LXCs. The added functionality is expected to decrease bandwidth usage and expedite package installation and updates. https://github.com/tteck/Proxmox/discussions/2332
+  - The option to utilize Apt-Cacher-NG (Advanced settings) when creating LXCs. The added functionality is expected to decrease bandwidth usage and expedite package installation and updates. https://github.com/Mike-Allen/Proxmox/discussions/2332
 
 ## 2024-01-09
 
@@ -658,7 +658,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 - **Sonarr LXC**
   - Breaking Change
   - Complete recode
-  - https://github.com/tteck/Proxmox/discussions/1738#discussioncomment-8005107
+  - https://github.com/Mike-Allen/Proxmox/discussions/1738#discussioncomment-8005107
 
 ## 2024-01-01
 
@@ -946,7 +946,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **qBittorrent LXC**
-  - Removed from this repository for potential malicious hidden code https://github.com/tteck/Proxmox/discussions/1725
+  - Removed from this repository for potential malicious hidden code https://github.com/Mike-Allen/Proxmox/discussions/1725
 
 ## 2023-08-16
 
@@ -1041,7 +1041,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **Proxmox VE Monitor-All**
-  - Skip instances based on onboot and templates. [8c2a3cc](https://github.com/tteck/Proxmox/commit/8c2a3cc4d774fa13d17f695d6bdf9a4deedb1372). 
+  - Skip instances based on onboot and templates. [8c2a3cc](https://github.com/Mike-Allen/Proxmox/commit/8c2a3cc4d774fa13d17f695d6bdf9a4deedb1372). 
 
 ## 2023-06-12
 
@@ -1481,7 +1481,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 
 ### Changed
 
-- **v5 Scripts** (Testing before moving forward https://github.com/tteck/Proxmox/discussions/881)
+- **v5 Scripts** (Testing before moving forward https://github.com/Mike-Allen/Proxmox/discussions/881)
   - Adguard Home LXC
   - Docker LXC
   - Home Assistant Core LXC
@@ -1571,7 +1571,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **Proxmox LXC Updater** 
-  - Now updates Ubuntu, Debian, Devuan, Alpine Linux, CentOS-Rocky-Alma, Fedora, ArchLinux [(@Uruknara)](https://github.com/tteck/Proxmox/commits?author=Uruknara)
+  - Now updates Ubuntu, Debian, Devuan, Alpine Linux, CentOS-Rocky-Alma, Fedora, ArchLinux [(@Uruknara)](https://github.com/Mike-Allen/Proxmox/commits?author=Uruknara)
 
 ## 2022-11-13
 
@@ -1585,7 +1585,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **HA Bluetooth Integration Preparation** 
-  - [NEW Script](https://github.com/tteck/Proxmox/discussions/719)
+  - [NEW Script](https://github.com/Mike-Allen/Proxmox/discussions/719)
 
 ## 2022-11-04
 
@@ -1608,7 +1608,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **Container & Core Restore from Backup** 
-  - [NEW Scripts](https://github.com/tteck/Proxmox/discussions/674)
+  - [NEW Scripts](https://github.com/Mike-Allen/Proxmox/discussions/674)
 
 ## 2022-10-07
 
@@ -1781,7 +1781,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 - **Home Assistant OS VM** 
   - Present the drive to the guest as a solid-state drive rather than a rotational hard disk. There is no requirement that the underlying storage actually be backed by SSD's. 
   - When the VM’s filesystem marks blocks as unused after deleting files, the SCSI controller will relay this information to the storage, which will then shrink the disk image accordingly.
-  - 👉 [more info](https://github.com/tteck/Proxmox/discussions/378)
+  - 👉 [more info](https://github.com/Mike-Allen/Proxmox/discussions/378)
 
 ## 2022-07-22
 
@@ -1993,7 +1993,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 ### Changed
 
 - **ALL LXC's**
-  - New [V3 Install Script](https://github.com/tteck/Proxmox/issues/162) 
+  - New [V3 Install Script](https://github.com/Mike-Allen/Proxmox/issues/162) 
 - **ioBroker LXC**
   - New Script V3
 
@@ -2313,7 +2313,7 @@ All LXC instances created using this repository come pre-installed with Midnight
 - **GamUntu LXC**
   - New Script
 - **Jellyfin Media Server LXC**
-  - new script to fix [start issue](https://github.com/tteck/Proxmox/issues/29#issue-1127457380)
+  - new script to fix [start issue](https://github.com/Mike-Allen/Proxmox/issues/29#issue-1127457380)
 - **MotionEye NVR LXC**
   - New script
 
