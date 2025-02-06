@@ -186,7 +186,7 @@ debug="TEMPLATE         = "+=${TEMPLATE}
 msg_ok $debug
 debug="PCT_OPTIONS      = "+=${PCT_OPTIONS}
 msg_ok $debug
-msg_info "Burp"
+msg_ok "Burp"
 msg_ok "End of Debugging"
 pct create $CTID ${TEMPLATE_STORAGE}:vztmpl/${TEMPLATE} ${PCT_OPTIONS[@]} >/dev/null ||
   exit "A problem occured while trying to create container."
