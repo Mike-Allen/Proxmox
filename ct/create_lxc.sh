@@ -178,16 +178,16 @@ PCT_OPTIONS=(${PCT_OPTIONS[@]:-${DEFAULT_PCT_OPTIONS[@]}})
 
 # Create container
 msg_info "Creating LXC Container..."
-debug="CT ID "+=$CTID
+debug="CT ID            = $CTID"
 echo "$debug"
 msg_ok $CTID
-debug="TEMPLATE_STORAGE "+=${TEMPLATE_STORAGE}
+debug="TEMPLATE_STORAGE = ${TEMPLATE_STORAGE}"
 echo "$debug"
 msg_ok ${TEMPLATE_STORAGE}
-debug="TEMPLATE "+=${TEMPLATE}
+debug="TEMPLATE         = ${TEMPLATE}"
 echo "$debug"
 msg_ok ${TEMPLATE}
-debug="PCT_OPTIONS "+=${PCT_OPTIONS}
+debug="PCT_OPTIONS      = ${PCT_OPTIONS}"
 echo "$debug"
 msg_ok ${PCT_OPTIONS}
 msg_ok "Burps"
