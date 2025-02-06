@@ -182,7 +182,7 @@ msg_info "\nCT ID            = "+=$CTID
 msg_info "\nTEMPLATE_STORAGE = "+=${TEMPLATE_STORAGE}
 msg_info "\nTEMPLATE         = "+=${TEMPLATE}
 msg_info "\nPCT_OPTIONS      = "+=${PCT_OPTIONS}
-msg_info "End of Debugging\n"
+msg_info "\nEnd of Debugging\n"
 pct create $CTID ${TEMPLATE_STORAGE}:vztmpl/${TEMPLATE} ${PCT_OPTIONS[@]} >/dev/null ||
   exit "A problem occured while trying to create container."
 msg_ok "LXC Container ${BL}$CTID${CL} ${GN}was successfully created."
