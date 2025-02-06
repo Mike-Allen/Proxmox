@@ -19,7 +19,7 @@ EOF
 header_info
 echo -e "Loading..."
 APP="Readeck"
-var_disk="2"
+var_disk="5"
 var_cpu="1"
 var_ram="512"
 var_os="debian"
