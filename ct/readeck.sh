@@ -41,13 +41,13 @@ function default_settings() {
   GATE=""
   APT_CACHER=""
   APT_CACHER_IP=""
-  DISABLEIP6="no"
+  DISABLEIP6="yes"
   MTU=""
   SD=""
   NS=""
   MAC=""
   VLAN=""
-  SSH="no"
+  SSH="yes"
   VERB="no"
   echo_default
 }
@@ -71,6 +71,6 @@ start
 build_container
 description
 
-msg_ok "Completed Successfully!\n"
+msg_ok "Completed Successfully!\n Mike says hi!\n"
 echo -e "${APP} should be reachable by going to the following URL.
              ${BL}http://${IP}:8000${CL}\n"
