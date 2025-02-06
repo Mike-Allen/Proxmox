@@ -179,14 +179,14 @@ PCT_OPTIONS=(${PCT_OPTIONS[@]:-${DEFAULT_PCT_OPTIONS[@]}})
 # Create container
 msg_info "Creating LXC Container"
 debug="CT ID            = "+=$CTID
-msg_info $debug
+msg_ok $debug
 debug="TEMPLATE_STORAGE = "+=${TEMPLATE_STORAGE}
-msg_info $debug
+msg_ok $debug
 debug="TEMPLATE         = "+=${TEMPLATE}
-msg_info $debug
+msg_ok $debug
 debug="PCT_OPTIONS      = "+=${PCT_OPTIONS}
-msg_info $debug
-msg_info "End of Debugging"
+msg_ok $debug
+msg_ok "End of Debugging"
 pct create $CTID ${TEMPLATE_STORAGE}:vztmpl/${TEMPLATE} ${PCT_OPTIONS[@]} >/dev/null ||
   exit "A problem occured while trying to create container."
 msg_ok "LXC Container ${BL}$CTID${CL} ${GN}was successfully created."
