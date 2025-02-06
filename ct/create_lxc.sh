@@ -177,7 +177,7 @@ PCT_OPTIONS=(${PCT_OPTIONS[@]:-${DEFAULT_PCT_OPTIONS[@]}})
 [[ " ${PCT_OPTIONS[@]} " =~ " -rootfs " ]] || PCT_OPTIONS+=(-rootfs $CONTAINER_STORAGE:${PCT_DISK_SIZE:-8})
 
 # Create container
-msg_info "Creating LXC Container"
+msg_info "Creating LXC Container..."
 debug="CT ID            = "+=$CTID
 msg_ok $debug
 debug="TEMPLATE_STORAGE = "+=${TEMPLATE_STORAGE}
