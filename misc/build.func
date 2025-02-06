@@ -169,7 +169,7 @@ advanced_settings() {
     var_os=""
     while [ -z "$var_os" ]; do
       if var_os=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "DISTRIBUTION" --radiolist "Choose Distribution:" 10 58 2 \
-        "debian" "" OFF \
+        "debian" "" ON \
         "ubuntu" "" OFF \
         3>&1 1>&2 2>&3); then
         if [ -n "$var_os" ]; then
@@ -186,7 +186,7 @@ advanced_settings() {
     while [ -z "$var_version" ]; do
       if var_version=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "DEBIAN VERSION" --radiolist "Choose Version" 10 58 2 \
         "11" "Bullseye" OFF \
-        "12" "Bookworm" OFF \
+        "12" "Bookworm" ON \
         3>&1 1>&2 2>&3); then
         if [ -n "$var_version" ]; then
           echo -e "${DGN}Using $var_os Version: ${BGN}$var_version${CL}"
@@ -203,7 +203,7 @@ advanced_settings() {
       if var_version=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "UBUNTU VERSION" --radiolist "Choose Version" 10 58 3 \
         "20.04" "Focal" OFF \
         "22.04" "Jammy" OFF \
-        "24.04" "Noble" OFF \
+        "24.04" "Noble" ON \
         3>&1 1>&2 2>&3); then
         if [ -n "$var_version" ]; then
           echo -e "${DGN}Using $var_os Version: ${BGN}$var_version${CL}"
@@ -217,7 +217,7 @@ advanced_settings() {
   CT_TYPE=""
   while [ -z "$CT_TYPE" ]; do
     if CT_TYPE=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "CONTAINER TYPE" --radiolist "Choose Type" 10 58 2 \
-      "1" "Unprivileged" OFF \
+      "1" "Unprivileged" ON \
       "0" "Privileged" OFF \
       3>&1 1>&2 2>&3); then
       if [ -n "$CT_TYPE" ]; then
@@ -380,7 +380,8 @@ advanced_settings() {
     fi
   fi
 
-  if (whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --defaultno --title "IPv6" --yesno "Disable IPv6?" 10 58); then
+  # --defaultno
+  if (whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --title "IPv6" --yesno "Disable IPv6?" 10 58); then
     DISABLEIP6="yes"
   else
     DISABLEIP6="no"
@@ -448,8 +449,9 @@ advanced_settings() {
     exit-script
   fi
 
+  # --defaultno
   if [[ "$PW" == -password* ]]; then
-    if (whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --defaultno --title "SSH ACCESS" --yesno "Enable Root SSH Access?" 10 58); then
+    if (whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --title "SSH ACCESS" --yesno "Enable Root SSH Access?" 10 58); then
       SSH="yes"
     else
       SSH="no"
