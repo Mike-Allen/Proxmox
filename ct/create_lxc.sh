@@ -174,35 +174,38 @@ DEFAULT_PCT_OPTIONS=(
   -arch $(dpkg --print-architecture))
 
 # Debugging values
-echo "Debugging start..."
-echo "--------------------------"
-echo "PCT_OPTIONS         = $PCT_OPTIONS"
-echo "PCT_DEFAULT_OPTIONS = $DEFAULT_PCT_OPTIONS"
-echo "--------------------------"
+# echo "Debugging start..."
+# echo "--------------------------"
+# echo "PCT_OPTIONS         = $PCT_OPTIONS"
+# echo "PCT_DEFAULT_OPTIONS = $DEFAULT_PCT_OPTIONS"
+# echo "--------------------------"
+
 PCT_OPTIONS=(${PCT_OPTIONS[@]:-${DEFAULT_PCT_OPTIONS[@]}})
 [[ " ${PCT_OPTIONS[@]} " =~ " -rootfs " ]] || PCT_OPTIONS+=(-rootfs $CONTAINER_STORAGE:${PCT_DISK_SIZE:-8})
 
-echo "--------------------------"
-echo "PCT_OPTIONS         = $PCT_OPTIONS"
-echo "PCT_DEFAULT_OPTIONS = $DEFAULT_PCT_OPTIONS"
-echo "--------------------------"
+# echo "--------------------------"
+# echo "PCT_OPTIONS         = $PCT_OPTIONS"
+# echo "PCT_DEFAULT_OPTIONS = $DEFAULT_PCT_OPTIONS"
+# echo "--------------------------"
 
 # Create container
-msg_info "Creating LXC Container..."
-debug="CT ID            = $CTID"
-echo "\n$debug"
-msg_ok $CTID
-debug="TEMPLATE_STORAGE = ${TEMPLATE_STORAGE}"
-echo "$debug"
-msg_ok ${TEMPLATE_STORAGE}
-debug="TEMPLATE         = ${TEMPLATE}"
-echo "$debug"
-msg_ok ${TEMPLATE}
-debug="PCT_OPTIONS      = ${PCT_OPTIONS}"
-echo "$debug"
-msg_ok ${PCT_OPTIONS}
-msg_ok "Burps"
-msg_ok "End of Debugging"
+msg_info "Creating LXC Container"
+
+# debug="CT ID            = $CTID"
+# echo "\n$debug"
+# msg_ok $CTID
+# debug="TEMPLATE_STORAGE = ${TEMPLATE_STORAGE}"
+# echo "$debug"
+# msg_ok ${TEMPLATE_STORAGE}
+# debug="TEMPLATE         = ${TEMPLATE}"
+# echo "$debug"
+# msg_ok ${TEMPLATE}
+# debug="PCT_OPTIONS      = ${PCT_OPTIONS}"
+# echo "$debug"
+# msg_ok ${PCT_OPTIONS}
+# msg_ok "Burps"
+# msg_ok "End of Debugging"
+
 pct create $CTID ${TEMPLATE_STORAGE}:vztmpl/${TEMPLATE} ${PCT_OPTIONS[@]} >/dev/null ||
   exit "A problem occured while trying to create container."
 msg_ok "LXC Container ${BL}$CTID${CL} ${GN}was successfully created."
