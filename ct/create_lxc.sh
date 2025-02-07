@@ -173,13 +173,24 @@ fi
 DEFAULT_PCT_OPTIONS=(
   -arch $(dpkg --print-architecture))
 
+# Debugging values
+echo "Debugging start..."
+echo "--------------------------"
+echo "PCT_OPTIONS         = $PCT_OPTIONS"
+echo "PCT_DEFAULT_OPTIONS = $DEFAULT_PCT_OPTIONS"
+echo "--------------------------"
 PCT_OPTIONS=(${PCT_OPTIONS[@]:-${DEFAULT_PCT_OPTIONS[@]}})
 [[ " ${PCT_OPTIONS[@]} " =~ " -rootfs " ]] || PCT_OPTIONS+=(-rootfs $CONTAINER_STORAGE:${PCT_DISK_SIZE:-8})
+
+echo "--------------------------"
+echo "PCT_OPTIONS         = $PCT_OPTIONS"
+echo "PCT_DEFAULT_OPTIONS = $DEFAULT_PCT_OPTIONS"
+echo "--------------------------"
 
 # Create container
 msg_info "Creating LXC Container..."
 debug="CT ID            = $CTID"
-echo "$debug"
+echo "\n$debug"
 msg_ok $CTID
 debug="TEMPLATE_STORAGE = ${TEMPLATE_STORAGE}"
 echo "$debug"
