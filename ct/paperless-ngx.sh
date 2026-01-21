@@ -90,7 +90,8 @@ function update_script() {
       cp -r /opt/paperless/paperless.conf paperless-ngx/
       cp -r paperless-ngx/* /opt/paperless/
 	  cd /opt/paperless
-	  echo banana
+	  # Allow the packages to be stored in the system package directory. This could break things but only Paperless runs.
+	  export PIP_BREAK_SYSTEM_PACKAGES=1
       pip install -r requirements.txt # &>/dev/null
       cd /opt/paperless/src
       /usr/bin/python3 manage.py migrate &>/dev/null
