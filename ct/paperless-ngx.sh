@@ -89,7 +89,7 @@ function update_script() {
       tar -xf paperless-ngx-$RELEASE.tar.xz
       cp -r /opt/paperless/paperless.conf paperless-ngx/
       cp -r paperless-ngx/* /opt/paperless/
-      cd /opt/paperless
+	  cd /opt/paperless
 	  echo banana
       pip install -r requirements.txt # &>/dev/null
       cd /opt/paperless/src
