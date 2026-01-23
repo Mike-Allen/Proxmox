@@ -119,7 +119,7 @@ arch_check() {
 ssh_check() {
   if command -v pveversion >/dev/null 2>&1 && [ -n "${SSH_CLIENT:+x}" ]; then
     if whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --defaultno --title "SSH DETECTED" --yesno "It's advisable to utilize the Proxmox shell rather than SSH, as there may be potential complications with variable retrieval. Proceed using SSH?" 10 72; then
-      whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --msgbox --title "Proceed using SSH" "You've chosen to proceed using SSH. If any issues arise, please run the script in the Proxmox shell before creating a repository issue." 10 72
+      whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --msgbox --title "Proceed using SSH" "You've chosen to proceed using SSH. If any issues arise, please run the script in the Proxmox shell before creating a repository issue." 10 72
     else
       clear
       echo "Exiting due to SSH usage. Please consider using the Proxmox shell."
@@ -163,12 +163,12 @@ exit-script() {
 
 # This function allows the user to configure advanced settings for the script.
 advanced_settings() {
-  whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --msgbox --title "Here is an instructional tip:" "To make a selection, use the Spacebar." 8 58
-  whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --msgbox --title "Default distribution for $APP" "${var_os} ${var_version} \n \nIf the default Linux distribution is not adhered to, script support will be discontinued. \n" 10 58
+  whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --msgbox --title "Here is an instructional tip:" "To make a selection, use the Spacebar." 8 58
+  whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --msgbox --title "Default distribution for $APP" "${var_os} ${var_version} \n \nIf the default Linux distribution is not adhered to, script support will be discontinued. \n" 10 58
   if [ "$var_os" != "alpine" ]; then
     var_os=""
     while [ -z "$var_os" ]; do
-      if var_os=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "DISTRIBUTION" --radiolist "Choose Distribution:" 10 58 2 \
+      if var_os=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --title "DISTRIBUTION" --radiolist "Choose Distribution:" 10 58 2 \
         "debian" "" ON \
         "ubuntu" "" OFF \
         3>&1 1>&2 2>&3); then
@@ -184,7 +184,7 @@ advanced_settings() {
   if [ "$var_os" == "debian" ]; then
     var_version=""
     while [ -z "$var_version" ]; do
-      if var_version=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "DEBIAN VERSION" --radiolist "Choose Version" 10 58 2 \
+      if var_version=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --title "DEBIAN VERSION" --radiolist "Choose Version" 10 58 2 \
         "11" "Bullseye" OFF \
         "12" "Bookworm" ON \
         3>&1 1>&2 2>&3); then
@@ -200,7 +200,7 @@ advanced_settings() {
   if [ "$var_os" == "ubuntu" ]; then
     var_version=""
     while [ -z "$var_version" ]; do
-      if var_version=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "UBUNTU VERSION" --radiolist "Choose Version" 10 58 3 \
+      if var_version=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --title "UBUNTU VERSION" --radiolist "Choose Version" 10 58 3 \
         "20.04" "Focal" OFF \
         "22.04" "Jammy" OFF \
         "24.04" "Noble" ON \
@@ -216,7 +216,7 @@ advanced_settings() {
 
   CT_TYPE=""
   while [ -z "$CT_TYPE" ]; do
-    if CT_TYPE=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --title "CONTAINER TYPE" --radiolist "Choose Type" 10 58 2 \
+    if CT_TYPE=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --title "CONTAINER TYPE" --radiolist "Choose Type" 10 58 2 \
       "1" "Unprivileged" ON \
       "0" "Privileged" OFF \
       3>&1 1>&2 2>&3); then
@@ -229,14 +229,14 @@ advanced_settings() {
   done
 
   while true; do
-    if PW1=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --passwordbox "\nSet Root Password (needed for root ssh access)" 9 58 --title "PASSWORD (leave blank for automatic login)" 3>&1 1>&2 2>&3); then
+    if PW1=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --passwordbox "\nSet Root Password (needed for root ssh access)" 9 58 --title "PASSWORD (leave blank for automatic login)" 3>&1 1>&2 2>&3); then
       if [[ ! -z "$PW1" ]]; then
         if [[ "$PW1" == *" "* ]]; then
           whiptail --msgbox "Password cannot contain spaces. Please try again." 8 58
         elif [ ${#PW1} -lt 5 ]; then
           whiptail --msgbox "Password must be at least 5 characters long. Please try again." 8 58
         else
-          if PW2=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --passwordbox "\nVerify Root Password" 9 58 --title "PASSWORD VERIFICATION" 3>&1 1>&2 2>&3); then
+          if PW2=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --passwordbox "\nVerify Root Password" 9 58 --title "PASSWORD VERIFICATION" 3>&1 1>&2 2>&3); then
             if [[ "$PW1" == "$PW2" ]]; then
               PW="-password $PW1"
               echo -e "${DGN}Using Root Password: ${BGN}********${CL}"
@@ -260,7 +260,7 @@ advanced_settings() {
   done
 
 
-  if CT_ID=$(whiptail --backtitle "WDGIS WDGIS Proxmox VE Helper Scripts" --inputbox "Set Container ID" 8 58 $NEXTID --title "CONTAINER ID" 3>&1 1>&2 2>&3); then
+  if CT_ID=$(whiptail --backtitle "WDGIS Proxmox VE Helper Scripts" --inputbox "Set Container ID" 8 58 $NEXTID --title "CONTAINER ID" 3>&1 1>&2 2>&3); then
     if [ -z "$CT_ID" ]; then
       CT_ID="$NEXTID"
       echo -e "${DGN}Using Container ID: ${BGN}$CT_ID${CL}"
