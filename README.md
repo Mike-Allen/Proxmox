@@ -1,13 +1,13 @@
-<div style="border: 2px solid #d1d5db; padding: 20px; border-radius: 8px; background-color: #f9fafb;"> <h2 align="center">Proxmox VE Helper-Scripts: A Community Legacy</h2> <p>Dear Community,</p> <p>As we prepare to archive this repository, we’re excited to announce a new home for the project: <a href="https://github.com/Mike-Allen/Proxmox">https://github.com/Mike-Allen/Proxmox</a>. While we’re still settling in, this will soon become the go-to place for the latest Proxmox VE scripts.</p> <p>Thank you for your continued support.</p> <br>The Community </div>
+<div style="border: 2px solid #d1d5db; padding: 20px; border-radius: 8px; background-color: #f9fafb;"> <h2 align="center">WDGIS Proxmox VE Helper-Scripts: A Community Legacy</h2> <p>Dear Community,</p> Thw WDGIS home for the project is at : <a href="https://github.com/Mike-Allen/Proxmox">https://github.com/Mike-Allen/Proxmox</a>. WDGIS Proxmox VE scripts.</p> </div>
 <div align="center">
   <a href="#">
     <img src="https://raw.githubusercontent.com/Mike-Allen/Proxmox/Localize/misc/images/logo.png" height="100px" />
  </a>
 </div>
-<h1 align="center">Proxmox VE Helper-Scripts</h1>
+<h1 align="center">WDGIS Proxmox VE Helper-Scripts</h1>
 
 <p align="center">
-  <a href="https://helper-scripts.com">Website</a> | 
+  <a href="https://helper-scripts.com">Website that shows the Scripts - Don't run those</a> | 
   <a href="https://github.com/Mike-Allen/Proxmox/blob/Localize/.github/CONTRIBUTING.md">Contribute</a> |
   <a href="https://github.com/Mike-Allen/Proxmox/blob/Localize/USER_SUBMITTED_GUIDES.md">Guides</a> |
   <a href="https://github.com/Mike-Allen/Proxmox/blob/Localize/CHANGELOG.md">Changelog</a> |
