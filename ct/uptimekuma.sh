@@ -71,12 +71,15 @@ msg_ok "Stopped ${APP}"
 cd /opt/uptime-kuma
 
 msg_info "Pulling ${APP} ${LATEST}"
-git fetch --all &>/dev/null
+# WDGIS - Jan 28, 2026 - added --tags
+git fetch --all --tags &>/dev/null
 git checkout $LATEST --force &>/dev/null
 msg_ok "Pulled ${APP} ${LATEST}"
 
 msg_info "Updating ${APP} to ${LATEST}"
-npm install --production &>/dev/null
+# WDGIS - Jan 28, 2026
+# npm install --production &>/dev/null
+npm install --omit dev --no-audit
 npm run download-dist &>/dev/null
 msg_ok "Updated ${APP}"
 
