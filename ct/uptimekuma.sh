@@ -76,7 +76,7 @@ git checkout $LATEST --force &>/dev/null
 msg_ok "Pulled ${APP} ${LATEST}"
 
 msg_info "Updating ${APP} to ${LATEST}"
-npm install --production &>/dev/null
+npm install --production # &>/dev/null
 npm run download-dist &>/dev/null
 msg_ok "Updated ${APP}"
 
