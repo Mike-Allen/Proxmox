@@ -76,7 +76,7 @@ msg_info "Pulling ${APP} ${LATEST}"
 # WDGIS - Jan 28, 2026 - added --tags
 ## git fetch --all --tags &>/dev/null
 git fetch --all &>/dev/null
-git checkout $LATEST --force &>/dev/null
+git checkout $LATEST --force # &>/dev/null
 msg_ok "Pulled ${APP} ${LATEST}"
 
 msg_info "Updating ${APP} to ${LATEST}"
