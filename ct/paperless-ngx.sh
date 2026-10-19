@@ -94,7 +94,7 @@ function update_script() {
 	  export PIP_BREAK_SYSTEM_PACKAGES=1
       pip install -r requirements.txt # &>/dev/null
       cd /opt/paperless/src
-      /usr/bin/python3 manage.py migrate &>/dev/null
+      /usr/bin/python3 manage.py migrate # &>/dev/null
       echo "${RELEASE}" >/opt/${APP}_version.txt
       msg_ok "Updated to ${RELEASE}"
 
